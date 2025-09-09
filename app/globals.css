@@ -5,17 +5,17 @@
 
 :root {
   --background: oklch(1 0 0); /* White background */
-  --foreground: oklch(0.35 0 0); /* Dark gray text */
+  --foreground: oklch(0.15 0 0); /* Very dark gray text for better contrast */
   --card: oklch(0.98 0.02 195); /* Light cyan card background */
-  --card-foreground: oklch(0.25 0.08 195); /* Cyan-800 card text */
+  --card-foreground: oklch(0.15 0.08 195); /* Very dark cyan card text */
   --popover: oklch(1 0 0); /* White popover */
-  --popover-foreground: oklch(0.35 0 0); /* Dark gray popover text */
+  --popover-foreground: oklch(0.15 0 0); /* Very dark gray popover text */
   --primary: oklch(0.25 0.08 195); /* Cyan-800 primary */
   --primary-foreground: oklch(1 0 0); /* White text on primary */
   --secondary: oklch(0.65 0.15 35); /* Orange-600 secondary */
   --secondary-foreground: oklch(1 0 0); /* White text on secondary */
   --muted: oklch(0.96 0 0); /* Light muted background */
-  --muted-foreground: oklch(0.45 0 0); /* Muted text */
+  --muted-foreground: oklch(0.35 0 0); /* Darker muted text for better contrast */
   --accent: oklch(0.65 0.15 35); /* Orange-600 accent */
   --accent-foreground: oklch(1 0 0); /* White text on accent */
   --destructive: oklch(0.55 0.2 25); /* Red destructive */
@@ -30,7 +30,7 @@
   --chart-5: oklch(0.55 0.2 25); /* Red accent chart */
   --radius: 0.5rem;
   --sidebar: oklch(1 0 0); /* White sidebar */
-  --sidebar-foreground: oklch(0.35 0 0); /* Dark gray sidebar text */
+  --sidebar-foreground: oklch(0.15 0 0); /* Very dark gray sidebar text */
   --sidebar-primary: oklch(0.25 0.08 195); /* Cyan-800 sidebar primary */
   --sidebar-primary-foreground: oklch(1 0 0); /* White sidebar primary text */
   --sidebar-accent: oklch(0.65 0.15 35); /* Orange sidebar accent */
@@ -121,5 +121,20 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Ensure proper contrast for all headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-foreground;
+  }
+
+  /* Ensure nav has solid background for better contrast */
+  nav {
+    @apply bg-background border-b border-border;
   }
 }

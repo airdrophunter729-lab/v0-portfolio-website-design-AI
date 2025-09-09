@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+      <nav className="border-b border-border bg-background sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2">
@@ -18,26 +18,29 @@ export default function Home() {
               <span className="text-xl font-bold text-foreground">AI Visual Pro</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#services" className="text-foreground/70 hover:text-foreground transition-colors font-medium">
                 Services
               </a>
-              <a href="#portfolio" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#portfolio" className="text-foreground/70 hover:text-foreground transition-colors font-medium">
                 Portfolio
               </a>
-              <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a href="/blog" className="text-foreground/70 hover:text-foreground transition-colors font-medium">
+                Blog
+              </a>
+              <a href="#about" className="text-foreground/70 hover:text-foreground transition-colors font-medium">
                 About
               </a>
-              <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#contact" className="text-foreground/70 hover:text-foreground transition-colors font-medium">
                 Contact
               </a>
             </div>
-            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">Get Started</Button>
+            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">Get Started</Button>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative py-20 lg:py-32 overflow-hidden bg-background">
         <div className="absolute inset-0 bg-gradient-to-br from-card to-background"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -50,7 +53,7 @@ export default function Home() {
                   Transform Your Products with
                   <span className="text-primary"> AI Photography</span>
                 </h1>
-                <p className="text-xl text-muted-foreground leading-relaxed text-pretty">
+                <p className="text-xl text-foreground/70 leading-relaxed text-pretty">
                   Professional product lifestyle shots, high-converting ad creatives, and custom AI tools. Get
                   magazine-quality visuals in 24 hours without expensive photo shoots.
                 </p>
@@ -68,7 +71,7 @@ export default function Home() {
                   See Pricing
                 </Button>
               </div>
-              <div className="flex items-center space-x-6 text-sm text-muted-foreground">
+              <div className="flex items-center space-x-6 text-sm text-foreground/60">
                 <div className="flex items-center space-x-2">
                   <Star className="w-4 h-4 fill-accent text-accent" />
                   <span>5.0 Rating on Upwork</span>
@@ -124,142 +127,152 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-balance">AI-Powered Visual Services</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+            <p className="text-xl text-foreground/70 max-w-2xl mx-auto text-pretty">
               From product photography to ad creatives, I deliver professional results using cutting-edge AI technology
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="border-border hover:shadow-lg transition-shadow">
+            <Card className="border-border hover:shadow-lg transition-shadow bg-card">
               <CardHeader>
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <Camera className="w-6 h-6 text-primary" />
                 </div>
-                <CardTitle className="text-foreground">Product Lifestyle Shots</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-card-foreground">Product Lifestyle Shots</CardTitle>
+                <CardDescription className="text-card-foreground/70">
                   10 professional lifestyle images in 24 hours using advanced AI technology
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <ul className="space-y-2 text-sm text-card-foreground/70">
                   <li>• Multiple background contexts</li>
                   <li>• High-resolution files</li>
                   <li>• Commercial usage rights</li>
                   <li>• 24-hour delivery</li>
                 </ul>
                 <div className="mt-6">
-                  <span className="text-2xl font-bold text-foreground">$125</span>
-                  <span className="text-muted-foreground"> - $375</span>
+                  <span className="text-2xl font-bold text-card-foreground">$125</span>
+                  <span className="text-card-foreground/70"> - $375</span>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-border hover:shadow-lg transition-shadow">
+            <Card className="border-border hover:shadow-lg transition-shadow bg-card">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
                   <Zap className="w-6 h-6 text-accent" />
                 </div>
-                <CardTitle className="text-foreground">Ad Creative Variations</CardTitle>
-                <CardDescription>20+ high-converting ad creatives optimized for split testing</CardDescription>
+                <CardTitle className="text-card-foreground">Ad Creative Variations</CardTitle>
+                <CardDescription className="text-card-foreground/70">
+                  20+ high-converting ad creatives optimized for split testing
+                </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <ul className="space-y-2 text-sm text-card-foreground/70">
                   <li>• Multiple contexts & angles</li>
                   <li>• Platform optimization</li>
                   <li>• Performance predictions</li>
                   <li>• A/B testing ready</li>
                 </ul>
                 <div className="mt-6">
-                  <span className="text-2xl font-bold text-foreground">$495</span>
-                  <span className="text-muted-foreground"> - $1,295</span>
+                  <span className="text-2xl font-bold text-card-foreground">$495</span>
+                  <span className="text-card-foreground/70"> - $1,295</span>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-border hover:shadow-lg transition-shadow">
+            <Card className="border-border hover:shadow-lg transition-shadow bg-card">
               <CardHeader>
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <Users className="w-6 h-6 text-primary" />
                 </div>
-                <CardTitle className="text-foreground">AI Training & Consulting</CardTitle>
-                <CardDescription>Team training and custom AI workflow implementation</CardDescription>
+                <CardTitle className="text-card-foreground">AI Training & Consulting</CardTitle>
+                <CardDescription className="text-card-foreground/70">
+                  Team training and custom AI workflow implementation
+                </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <ul className="space-y-2 text-sm text-card-foreground/70">
                   <li>• Live team training sessions</li>
                   <li>• Custom workflow documentation</li>
                   <li>• 50+ tested prompts</li>
                   <li>• Ongoing support</li>
                 </ul>
                 <div className="mt-6">
-                  <span className="text-2xl font-bold text-foreground">$495</span>
-                  <span className="text-muted-foreground"> - $1,995</span>
+                  <span className="text-2xl font-bold text-card-foreground">$495</span>
+                  <span className="text-card-foreground/70"> - $1,995</span>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-border hover:shadow-lg transition-shadow">
+            <Card className="border-border hover:shadow-lg transition-shadow bg-card">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
                   <Globe className="w-6 h-6 text-accent" />
                 </div>
-                <CardTitle className="text-foreground">Global Market Adaptation</CardTitle>
-                <CardDescription>Culturally adapted creatives for 8+ international markets</CardDescription>
+                <CardTitle className="text-card-foreground">Global Market Adaptation</CardTitle>
+                <CardDescription className="text-card-foreground/70">
+                  Culturally adapted creatives for 8+ international markets
+                </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <ul className="space-y-2 text-sm text-card-foreground/70">
                   <li>• 8 major global markets</li>
                   <li>• Cultural authenticity</li>
                   <li>• Local language integration</li>
                   <li>• Market psychology notes</li>
                 </ul>
                 <div className="mt-6">
-                  <span className="text-2xl font-bold text-foreground">$1,295</span>
-                  <span className="text-muted-foreground"> - $3,495</span>
+                  <span className="text-2xl font-bold text-card-foreground">$1,295</span>
+                  <span className="text-card-foreground/70"> - $3,495</span>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-border hover:shadow-lg transition-shadow">
+            <Card className="border-border hover:shadow-lg transition-shadow bg-card">
               <CardHeader>
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <BookOpen className="w-6 h-6 text-primary" />
                 </div>
-                <CardTitle className="text-foreground">Custom AI Tools</CardTitle>
-                <CardDescription>Industry-specific AI applications and automation tools</CardDescription>
+                <CardTitle className="text-card-foreground">Custom AI Tools</CardTitle>
+                <CardDescription className="text-card-foreground/70">
+                  Industry-specific AI applications and automation tools
+                </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <ul className="space-y-2 text-sm text-card-foreground/70">
                   <li>• Custom web applications</li>
                   <li>• API integrations</li>
                   <li>• Mobile-responsive design</li>
                   <li>• 6 months support</li>
                 </ul>
                 <div className="mt-6">
-                  <span className="text-2xl font-bold text-foreground">$2,495</span>
-                  <span className="text-muted-foreground"> - $8,995</span>
+                  <span className="text-2xl font-bold text-card-foreground">$2,495</span>
+                  <span className="text-card-foreground/70"> - $8,995</span>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-border hover:shadow-lg transition-shadow">
+            <Card className="border-border hover:shadow-lg transition-shadow bg-card">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
                   <BookOpen className="w-6 h-6 text-accent" />
                 </div>
-                <CardTitle className="text-foreground">Digital Products</CardTitle>
-                <CardDescription>Prompt libraries and workflow guides for your industry</CardDescription>
+                <CardTitle className="text-card-foreground">Digital Products</CardTitle>
+                <CardDescription className="text-card-foreground/70">
+                  Prompt libraries and workflow guides for your industry
+                </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <ul className="space-y-2 text-sm text-card-foreground/70">
                   <li>• 100+ tested prompts</li>
                   <li>• Step-by-step workflows</li>
                   <li>• Video tutorials</li>
                   <li>• Monthly updates</li>
                 </ul>
                 <div className="mt-6">
-                  <span className="text-2xl font-bold text-foreground">$47</span>
-                  <span className="text-muted-foreground"> - $197</span>
+                  <span className="text-2xl font-bold text-card-foreground">$47</span>
+                  <span className="text-card-foreground/70"> - $197</span>
                 </div>
               </CardContent>
             </Card>
@@ -268,11 +281,11 @@ export default function Home() {
       </section>
 
       {/* Portfolio Preview */}
-      <section id="portfolio" className="py-20">
+      <section id="portfolio" className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-balance">Recent Work</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+            <p className="text-xl text-foreground/70 max-w-2xl mx-auto text-pretty">
               See how AI-powered visuals transform ordinary products into compelling marketing assets
             </p>
           </div>
@@ -288,7 +301,7 @@ export default function Home() {
               />
               <div>
                 <h3 className="font-semibold text-foreground">Smart Water Bottle Campaign</h3>
-                <p className="text-sm text-muted-foreground">6 lifestyle variations for fitness brand</p>
+                <p className="text-sm text-foreground/70">6 lifestyle variations for fitness brand</p>
               </div>
             </div>
 
@@ -302,7 +315,7 @@ export default function Home() {
               />
               <div>
                 <h3 className="font-semibold text-foreground">Social Media Ad Pack</h3>
-                <p className="text-sm text-muted-foreground">20+ variations for split testing</p>
+                <p className="text-sm text-foreground/70">20+ variations for split testing</p>
               </div>
             </div>
 
@@ -316,7 +329,7 @@ export default function Home() {
               />
               <div>
                 <h3 className="font-semibold text-foreground">Customer Testimonial Creative</h3>
-                <p className="text-sm text-muted-foreground">High-converting social proof ad</p>
+                <p className="text-sm text-foreground/70">High-converting social proof ad</p>
               </div>
             </div>
           </div>
@@ -334,23 +347,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      {/* CTA Section - Fixed with explicit colors and isolation */}
+      <section className="py-20 bg-primary relative isolate">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="text-3xl lg:text-4xl font-bold text-balance">Ready to Transform Your Product Visuals?</h2>
-            <p className="text-xl opacity-90 text-pretty">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white text-balance" style={{ color: "white" }}>
+              Ready to Transform Your Product Visuals?
+            </h2>
+            <p className="text-xl text-white/90 text-pretty" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
               Join 500+ brands using AI-powered visuals to increase conversions and reduce marketing costs
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
                 Start Your Project
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
+                className="border-white text-white hover:bg-white hover:text-primary bg-transparent font-semibold"
+                style={{ borderColor: "white", color: "white" }}
               >
                 View Upwork Profile
               </Button>
@@ -360,7 +376,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-border">
+      <footer className="py-12 border-t border-border bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
@@ -370,12 +386,12 @@ export default function Home() {
                 </div>
                 <span className="text-xl font-bold text-foreground">AI Visual Pro</span>
               </div>
-              <p className="text-muted-foreground">Professional AI-powered visual content for modern brands</p>
+              <p className="text-foreground/70">Professional AI-powered visual content for modern brands</p>
             </div>
 
             <div>
               <h4 className="font-semibold text-foreground mb-4">Services</h4>
-              <ul className="space-y-2 text-muted-foreground">
+              <ul className="space-y-2 text-foreground/70">
                 <li>Product Photography</li>
                 <li>Ad Creatives</li>
                 <li>AI Training</li>
@@ -385,17 +401,21 @@ export default function Home() {
 
             <div>
               <h4 className="font-semibold text-foreground mb-4">Resources</h4>
-              <ul className="space-y-2 text-muted-foreground">
+              <ul className="space-y-2 text-foreground/70">
                 <li>Portfolio</li>
                 <li>Pricing</li>
                 <li>Case Studies</li>
-                <li>Blog</li>
+                <li>
+                  <a href="/blog" className="hover:text-foreground transition-colors">
+                    Blog
+                  </a>
+                </li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold text-foreground mb-4">Connect</h4>
-              <ul className="space-y-2 text-muted-foreground">
+              <ul className="space-y-2 text-foreground/70">
                 <li>
                   <a
                     href="https://www.upwork.com/services/product/design-create-10-professional-product-lifestyle-shots-using-advanced-ai-1965315632243833872"
@@ -415,7 +435,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
+          <div className="border-t border-border mt-8 pt-8 text-center text-foreground/70">
             <p>&copy; 2024 AI Visual Pro. All rights reserved.</p>
           </div>
         </div>
